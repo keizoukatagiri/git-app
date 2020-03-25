@@ -12,6 +12,36 @@ Things you may want to cover:
 * Configuration
 
 * Database creation
+userテーブル
+|Column|Type|Options|
+|------|----|-------|
+|id|integer|
+|email|integer|
+|username|varchar255|
+
+massegesテーブル
+||Column|Type|Options|
+|------|----|-------|
+|masseges|text|
+|image|string|
+|group_id|interger|
+|user_id|interger|
+
+
+groups_usersテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+
+ Association
+- belongs_to :group
+- belongs_to :user
+
+### Association
+- belongs_to :group
+- belongs_to :user
 
 * Database initialization
 
